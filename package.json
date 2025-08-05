@@ -1,6 +1,6 @@
 {
   "name": "ts-express-kit",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,9 +19,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nazmulhasannasim333/ts-express-kit.git"
-  },
-    "bin": {
-    "ts-express-kit": "./dist/cli.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
