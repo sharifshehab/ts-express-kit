@@ -1,6 +1,6 @@
 {
   "name": "ts-express-kit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   "keywords": ["typescript", "express", "node", "ts-express-kit"],
   "author": "Nasim",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazmulhasannasim333/ts-express-kit.git"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
