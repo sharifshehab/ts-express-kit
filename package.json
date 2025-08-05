@@ -1,6 +1,6 @@
 {
   "name": "ts-express-kit",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "",
   "main": "index.js",
   "bin": {
