@@ -1,6 +1,7 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import config from "./app/config";
+import router from "./app/routes";
 // import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 // import notFount from "./app/middlewares/notFound";
 const app: Application = express();
@@ -14,7 +15,7 @@ app.use(
   })
 );
 
-// app.use("/api", router);
+app.use("/api", router);
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`Server Running on port ${config.port}`);
