@@ -1,9 +1,8 @@
 import express from "express";
+import TestController from "./test.controller";
 const router = express.Router();
 
-router.get("/test", (req, res) => {
-  res.send("Test route is working");
-});
+router.get("/test", TestController.getTests);
 
 
 export const TestRoutes = router;
