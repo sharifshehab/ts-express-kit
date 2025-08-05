@@ -5,5 +5,5 @@ router.get("/test", (req, res) => {
   res.send("Test route is working");
 });
 
-const TestRoutes = router;
-export default TestRoutes;
+
+export const TestRoutes = router;
