@@ -1,8 +1,11 @@
 {
   "name": "ts-express-kit",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "index.js",
+  "bin": {
+  "ts-express-kit": "./dist/bin/cli.js"
+},
   "scripts": {
     "build": "tsc",
     "lint": "eslint src --ignore-path .eslintignore --ext .ts",
