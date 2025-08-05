@@ -1,6 +1,6 @@
 {
   "name": "ts-express-kit",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A TypeScript starter kit for building Express applications with best practices.",
   "main": "index.js",
   "bin": {
