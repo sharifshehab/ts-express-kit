@@ -15,7 +15,8 @@ app.use(
   })
 );
 
-app.use("/api", router);
+// router setup
+app.use("/api/v1", router);
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`Server Running on port ${config.port}`);
