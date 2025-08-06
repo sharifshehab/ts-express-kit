@@ -1,6 +1,6 @@
 {
   "name": "ts-express-kit",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A TypeScript starter kit for building Express applications with best practices.",
   "main": "index.js",
   "bin": {
@@ -18,7 +18,7 @@
   },
   "keywords": ["typescript", "express", "node", "ts-express-kit"],
   "author": "Nasim",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/nazmulhasannasim333/ts-express-kit.git"
