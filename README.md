@@ -19,5 +19,5 @@
 ```bash
 npx ts-express-kit my-backend-app
 cd my-backend-app
-npm install
+npm run dev
 ```
