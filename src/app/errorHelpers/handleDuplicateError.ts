@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TGenericErrorResponse } from "../interfaces/error.types";
 
 // Handle duplicate key errors from MongoDB (e.g., email already exists)

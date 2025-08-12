@@ -1,15 +1,14 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ErrorRequestHandler, Request, Response } from 'express';
 import { TErrorSources } from '../interfaces/error.types';
 import AppError from '../errors/AppError';
-import config from '../config/env';
+import { envVars } from '../config/env';
 import { handlerDuplicateError } from '../errorHelpers/handleDuplicateError';
 import { handleCastError } from '../errorHelpers/handleCastError';
 import { handlerZodError } from '../errorHelpers/handlerZodError';
 import { handlerValidationError } from '../errorHelpers/handlerValidationError';
 
-const globalErrorHandler: ErrorRequestHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
+const globalErrorHandler: ErrorRequestHandler = (err: any, req: Request, res: Response) => {
 
 	// Show "console" error in development mode
 	// if (envVars.NODE_ENV === "development") {
@@ -68,8 +67,8 @@ const globalErrorHandler: ErrorRequestHandler = (err: any, req: Request, res: Re
 		success: false,
 		message,
 		errorSources,
-		// err: envVars.NODE_ENV === "development" ? err : null,
-		// stack: envVars.NODE_ENV === "development" ? err.stack : null
+		err: envVars.NODE_ENV === "development" ? err : null,
+		stack: envVars.NODE_ENV === "development" ? err.stack : null
 	});
 };
 
