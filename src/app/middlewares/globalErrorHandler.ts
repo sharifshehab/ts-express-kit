@@ -3,20 +3,25 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 import { TErrorSources } from '../interfaces/error.types';
 import AppError from '../errors/AppError';
-import config from '../config';
-import { handlerDuplicateError } from '../helpers/handleDuplicateError';
-import { handleCastError } from '../helpers/handleCastError';
-import { handlerZodError } from '../helpers/handlerZodError';
-import { handlerValidationError } from '../helpers/handlerValidationError';
+import config from '../config/env';
+import { handlerDuplicateError } from '../errorHelpers/handleDuplicateError';
+import { handleCastError } from '../errorHelpers/handleCastError';
+import { handlerZodError } from '../errorHelpers/handlerZodError';
+import { handlerValidationError } from '../errorHelpers/handlerValidationError';
 
 const globalErrorHandler: ErrorRequestHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
+
+	// Show "console" error in development mode
+	// if (envVars.NODE_ENV === "development") {
+	// 	console.log(err);
+	// }
 
 	// Default error values
 	let statusCode = 500;
 	let message = "Something Went Wrong!!";
 	let errorSources: TErrorSources[] = [];
 
-  	// Handle MongoDB duplicate key error
+	// Handle MongoDB duplicate key error
 	if (err.code === 11000) {
 		const simplifiedError = handlerDuplicateError(err);
 		statusCode = simplifiedError.statusCode;
