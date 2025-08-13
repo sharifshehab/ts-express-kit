@@ -1,31 +1,25 @@
 {
-  "name": "ts-express-kit",
-  "version": "1.1.4",
-  "description": "A TypeScript starter kit for building Express applications with best practices.",
+  "name": "mongo-serve",
+  "version": "1.0.0",
+  "description": "A ready-to-use backend boilerplate for Node.js, Express, MongoDB, Mongoose, and TypeScript featuring a clean modular folder structure, environment variable validation, centralized error handling, request validation, reusable utilities, and an example user module to speed up API development.",
   "main": "index.js",
-  "bin": {
-    "ts-express-kit": "./dist/bin/cli.js"
-  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "npx eslint ./src",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "clean": "rimraf dist",
     "rebuild": "npm run clean && npm run build"
   },
   "keywords": [
-    "typescript",
-    "express",
     "node",
-    "ts-express-kit"
+    "express",
+    "mongoDb",
+    "mongoose",
+    "typescript"  
   ],
-  "author": "Nasim",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nazmulhasannasim333/ts-express-kit.git"
-  },
+  "author": "Sharif Shehabuzzaman",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",

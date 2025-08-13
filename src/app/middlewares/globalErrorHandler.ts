@@ -11,9 +11,9 @@ import { handlerValidationError } from '../errorHelpers/handlerValidationError';
 const globalErrorHandler: ErrorRequestHandler = (err: any, req: Request, res: Response) => {
 
 	// Show "console" error in development mode
-	// if (envVars.NODE_ENV === "development") {
-	// 	console.log(err);
-	// }
+	if (envVars.NODE_ENV === "development") {
+		console.log(err);
+	}
 
 	// Default error values
 	let statusCode = 500;

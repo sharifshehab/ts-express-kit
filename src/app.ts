@@ -13,7 +13,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [envVars.FRONTEND_URL],
     credentials: true,
   })
 );
@@ -23,7 +23,7 @@ app.use("/api/v1", routes);
 
 // Main route
 app.get("/", (req: Request, res: Response) => {
-  res.send(`Server Running on port ${envVars.PORT}`);
+  res.send(`MongoServe Server Running on port ${envVars.PORT}`);
 });
 
 // global error handler middleware

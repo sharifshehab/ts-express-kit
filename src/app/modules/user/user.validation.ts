@@ -43,19 +43,19 @@ export const createUserZodSchema = z.object({
 export const updateUserZodSchema = createUserZodSchema.partial(); /* All the all fields are optional, because the user might update just one or two fields. */
 
 // If the update schema has fields not present in the create schema (e.g., isDeleted, isVerified, etc.), then use .extend() like this:
-export const updateUserZodSchema = createUserZodSchema
-    .partial()
-    .extend({
-        role: z
-            .enum(Object.values(Role) as [string]) 
-            .optional(),
-        isActive: z
-            .enum(Object.values(IsActive) as [string]) 
-            .optional(),
-        isDeleted: z
-            .boolean()
-            .optional(),
-        isVerified: z
-            .boolean()
-            .optional(),
-    });
+// export const updateUserZodSchema = createUserZodSchema
+//     .partial()
+//     .extend({
+//         role: z
+//             .enum(Object.values(Role) as [string])
+//             .optional(),
+//         isActive: z
+//             .enum(Object.values(IsActive) as [string])
+//             .optional(),
+//         isDeleted: z
+//             .boolean()
+//             .optional(),
+//         isVerified: z
+//             .boolean()
+//             .optional(),
+//     });
